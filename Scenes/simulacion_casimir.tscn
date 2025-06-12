@@ -1,0 +1,534 @@
+[gd_scene load_steps=41 format=3 uid="uid://bhgrg1m3314ex"]
+
+[ext_resource type="PackedScene" uid="uid://dvk83domic2cb" path="res://Scenes/casimir.tscn" id="1_il00m"]
+[ext_resource type="Script" path="res://Scripts/casimir.gd" id="2_elhvp"]
+[ext_resource type="Script" path="res://Scripts/camara.gd" id="2_mqakh"]
+[ext_resource type="FontFile" uid="uid://chsj2empaqna6" path="res://Fonts/bristone/Bristone.otf" id="3_ucgxe"]
+[ext_resource type="Texture2D" uid="uid://dxrgdwd6ypluk" path="res://images/simulaciones/icon_settings.png" id="4_5mpyl"]
+[ext_resource type="Script" path="res://Scripts/control_ec.gd" id="4_w1qu2"]
+[ext_resource type="Texture2D" uid="uid://d17kgf8kl6y12" path="res://images/simulaciones/iconUser.png" id="5_ybxsq"]
+[ext_resource type="Texture2D" uid="uid://6u1d3l6ic1db" path="res://images/simulaciones/iconsHome.png" id="6_26rfk"]
+[ext_resource type="Texture2D" uid="uid://d3fu2hspso8b7" path="res://images/Teoria/icons_ibro.svg" id="7_f06op"]
+[ext_resource type="Texture2D" uid="uid://dw6poys54oh7" path="res://images/simulaciones/icons8-iniciar.png" id="8_km8ro"]
+[ext_resource type="Texture2D" uid="uid://c8ocmkf0rnr3f" path="res://images/simulaciones/icons8-detener.png" id="9_tgu82"]
+[ext_resource type="Texture2D" uid="uid://cmaiji8fp7fs" path="res://images/simulaciones/icons8-nuevo.png" id="13_idnj5"]
+[ext_resource type="FontFile" uid="uid://daruwqg5bnjee" path="res://Fonts/static/JosefinSans-Bold.ttf" id="14_xiw8h"]
+[ext_resource type="FontFile" uid="uid://dycyhr5kjusbu" path="res://Fonts/static/JosefinSans-Medium.ttf" id="15_w7sh3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmodm"]
+content_margin_right = 320.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgn8n"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdp5p"]
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ir82"]
+corner_radius_top_left = 900
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 900
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24nln"]
+bg_color = Color(0.372549, 0.372549, 0.372549, 0.486275)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgbe1"]
+bg_color = Color(0.372549, 0.372549, 0.372549, 0.486275)
+corner_radius_top_left = 900
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 900
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d47e"]
+bg_color = Color(0.450648, 0.450648, 0.450648, 0.666667)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhc2l"]
+bg_color = Color(0.6, 0.6, 0.6, 0.121569)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8lhp"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0.121569)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y35s"]
+content_margin_right = 25.0
+bg_color = Color(0.47451, 0.643137, 0.705882, 0.298039)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4rmd"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb7sy"]
+bg_color = Color(0.268682, 0.184577, 0.622616, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsaju"]
+bg_color = Color(0.423529, 0.368627, 0.294118, 0.4)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34wt5"]
+bg_color = Color(0.6, 0.6, 0.6, 0.462745)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14yi3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.462745)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2emv"]
+bg_color = Color(0.11194, 0.213728, 0.394822, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pni6y"]
+bg_color = Color(0.23027, 0.207458, 0.369113, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj5cq"]
+bg_color = Color(0.737255, 0.541176, 0.564706, 0.352941)
+draw_center = false
+expand_margin_left = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afb57"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 15.0
+bg_color = Color(0.188028, 0.10179, 0.310488, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.456252, 0.217026, 0.460017, 1)
+
+[sub_resource type="Theme" id="Theme_typv4"]
+AcceptDialog/styles/embedded_border = SubResource("StyleBoxFlat_wj5cq")
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_afb57")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85fdi"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 15.0
+bg_color = Color(0.188028, 0.10179, 0.310488, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.456252, 0.217026, 0.460017, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiq3s"]
+
+[sub_resource type="Theme" id="Theme_tqu7n"]
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_85fdi")
+Window/styles/embedded_border = SubResource("StyleBoxFlat_fiq3s")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8eq2"]
+bg_color = Color(0.411765, 0.113725, 0.376471, 0.819608)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nboai"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.588235, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3q82m"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="simulacion_casimir" type="CanvasLayer"]
+
+[node name="background" type="Node3D" parent="."]
+
+[node name="casimir" parent="background" instance=ExtResource("1_il00m")]
+script = ExtResource("2_elhvp")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="background/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="CameraRig" type="Node3D" parent="background/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.150527, -0.0287962, 1.12753)
+script = ExtResource("2_mqakh")
+
+[node name="Camera3D" type="Camera3D" parent="background/SubViewportContainer/SubViewport/CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.105533)
+
+[node name="Control" type="Control" parent="background/SubViewportContainer"]
+layout_mode = 2
+script = ExtResource("4_w1qu2")
+
+[node name="MarginContainer" type="MarginContainer" parent="background/SubViewportContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_right = 839.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="background/SubViewportContainer/Control/MarginContainer"]
+layout_mode = 2
+
+[node name="L_tit" type="Label" parent="background/SubViewportContainer/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ucgxe")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_rmodm")
+text = "Efecto casimir"
+
+[node name="P_Home" type="Panel" parent="background/SubViewportContainer/Control"]
+layout_mode = 0
+offset_left = 743.0
+offset_top = 30.0
+offset_right = 1135.0
+offset_bottom = 79.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgn8n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="background/SubViewportContainer/Control/P_Home"]
+layout_mode = 2
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 211.0
+offset_bottom = 43.0
+theme_override_constants/separation = 18
+
+[node name="Config" type="Button" parent="background/SubViewportContainer/Control/P_Home/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Configuración"
+theme_override_icons/icon = ExtResource("4_5mpyl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kdp5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ir82")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_24nln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pgbe1")
+alignment = 0
+
+[node name="User" type="Button" parent="background/SubViewportContainer/Control/P_Home/HBoxContainer"]
+layout_mode = 2
+theme_override_icons/icon = ExtResource("5_ybxsq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kdp5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ir82")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_24nln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pgbe1")
+icon_alignment = 1
+
+[node name="Home" type="Button" parent="background/SubViewportContainer/Control/P_Home/HBoxContainer"]
+layout_mode = 2
+theme_override_icons/icon = ExtResource("6_26rfk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kdp5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8d47e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_24nln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhc2l")
+icon_alignment = 1
+
+[node name="Button" type="Button" parent="background/SubViewportContainer/Control/P_Home/HBoxContainer"]
+layout_mode = 2
+theme_override_icons/icon = ExtResource("7_f06op")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kdp5p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8d47e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_24nln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d8lhp")
+icon_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="background/SubViewportContainer/Control/P_Home/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7y35s")
+item_count = 1
+popup/item_0/text = "  Tunel Cuántico"
+
+[node name="P_control" type="Panel" parent="background/SubViewportContainer/Control"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 536.0
+offset_right = 1143.0
+offset_bottom = 638.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p4rmd")
+
+[node name="L_distancia" type="Label" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 12.0
+offset_right = 144.0
+offset_bottom = 42.0
+text = "Distancia"
+
+[node name="HSlider" type="HSlider" parent="background/SubViewportContainer/Control/P_control/L_distancia"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = 42.0
+offset_right = 86.0
+offset_bottom = 58.0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_eb7sy")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_eb7sy")
+min_value = 1.0
+max_value = 3.0
+value = 1.0
+
+[node name="tag_d" type="Label" parent="background/SubViewportContainer/Control/P_control/L_distancia"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = 58.0
+offset_right = 86.0
+offset_bottom = 81.0
+
+[node name="L_ancho" type="Label" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 12.0
+offset_right = 307.0
+offset_bottom = 42.0
+text = "Escala"
+
+[node name="HSlider" type="HSlider" parent="background/SubViewportContainer/Control/P_control/L_ancho"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 42.0
+offset_right = 87.0
+offset_bottom = 58.0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_eb7sy")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_eb7sy")
+min_value = 9.0
+max_value = 15.0
+value = 9.0
+
+[node name="tag_a" type="Label" parent="background/SubViewportContainer/Control/P_control/L_ancho"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 58.0
+offset_right = 87.0
+offset_bottom = 81.0
+
+[node name="L_modos" type="Label" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 12.0
+offset_right = 495.0
+offset_bottom = 42.0
+text = "Nº Modos"
+
+[node name="HSlider" type="HSlider" parent="background/SubViewportContainer/Control/P_control/L_modos"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 42.0
+offset_right = 104.0
+offset_bottom = 58.0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_eb7sy")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_eb7sy")
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="tag_m" type="Label" parent="background/SubViewportContainer/Control/P_control/L_modos"]
+layout_mode = 0
+offset_top = 58.0
+offset_right = 93.0
+offset_bottom = 81.0
+
+[node name="P_mandos" type="Panel" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 12.0
+offset_right = 846.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hsaju")
+
+[node name="B_iniciar" type="Button" parent="background/SubViewportContainer/Control/P_control/P_mandos"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 15.0
+offset_right = 141.0
+offset_bottom = 63.0
+tooltip_text = "Iniciar"
+theme_override_styles/normal = SubResource("StyleBoxFlat_34wt5")
+text = "
+"
+icon = ExtResource("8_km8ro")
+icon_alignment = 1
+
+[node name="B_parar" type="Button" parent="background/SubViewportContainer/Control/P_control/P_mandos"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 15.0
+offset_right = 219.0
+offset_bottom = 63.0
+tooltip_text = "Parar"
+theme_override_styles/normal = SubResource("StyleBoxFlat_14yi3")
+icon = ExtResource("9_tgu82")
+icon_alignment = 1
+
+[node name="B_Nuevo" type="Button" parent="background/SubViewportContainer/Control/P_control/P_mandos"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 15.0
+offset_right = 70.0
+offset_bottom = 63.0
+tooltip_text = "Nueva"
+theme_override_styles/normal = SubResource("StyleBoxFlat_34wt5")
+icon = ExtResource("13_idnj5")
+icon_alignment = 1
+
+[node name="B_guardar" type="Button" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 27.0
+offset_right = 1116.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_f2emv")
+text = "Guardar 
+"
+
+[node name="B_resultados" type="Button" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 27.0
+offset_right = 986.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pni6y")
+text = "Resultados"
+
+[node name="lbl_fuerza" type="Label" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 679.0
+offset_top = -54.0
+offset_right = 1098.0
+offset_bottom = -13.0
+
+[node name="lbl_mensaje" type="Label" parent="background/SubViewportContainer/Control/P_control"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = -42.0
+offset_right = 396.0
+offset_bottom = -19.0
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="background/SubViewportContainer/Control"]
+auto_translate_mode = 1
+title = ""
+position = Vector2i(0, 36)
+size = Vector2i(289, 100)
+borderless = true
+mouse_passthrough = true
+theme = SubResource("Theme_typv4")
+ok_button_text = "Aceptar"
+dialog_text = " ¿Deseas guardar esta simulación? "
+cancel_button_text = "Cancelar"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="background/SubViewportContainer/Control"]
+auto_translate_mode = 1
+title = ""
+position = Vector2i(0, 36)
+size = Vector2i(300, 140)
+borderless = true
+theme = SubResource("Theme_tqu7n")
+ok_button_text = "Confirmar"
+
+[node name="TextEdit" type="TextEdit" parent="background/SubViewportContainer/Control/AcceptDialog"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 84.0
+placeholder_text = " Añade una descripción"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="PopupPanel" type="PopupPanel" parent="background/SubViewportContainer/Control"]
+auto_translate_mode = 1
+transparent_bg = true
+position = Vector2i(958, 400)
+unresizable = false
+transparent = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_k8eq2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="background/SubViewportContainer/Control/PopupPanel"]
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_constants/separation = 5
+
+[node name="tituloExpl" type="Label" parent="background/SubViewportContainer/Control/PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_xiw8h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nboai")
+horizontal_alignment = 1
+
+[node name="TextoExplicacion" type="Label" parent="background/SubViewportContainer/Control/PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("15_w7sh3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3q82m")
+
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_Home/HBoxContainer/Config" to="background/SubViewportContainer/Control" method="_on_config_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_Home/HBoxContainer/User" to="background/SubViewportContainer/Control" method="_on_user_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_Home/HBoxContainer/Home" to="background/SubViewportContainer/Control" method="_on_home_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_Home/HBoxContainer/Button" to="background/SubViewportContainer/Control" method="_on_button_pressed"]
+[connection signal="item_selected" from="background/SubViewportContainer/Control/P_Home/HBoxContainer/OptionButton" to="background/SubViewportContainer/Control" method="_on_option_button_item_selected"]
+[connection signal="value_changed" from="background/SubViewportContainer/Control/P_control/L_ancho/HSlider" to="background/casimir" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_control/P_mandos/B_iniciar" to="background/casimir" method="_on_b_iniciar_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_control/P_mandos/B_parar" to="background/casimir" method="_on_b_parar_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_control/P_mandos/B_Nuevo" to="background/casimir" method="_on_b_nuevo_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_control/B_guardar" to="background/casimir" method="_on_b_guardar_pressed"]
+[connection signal="pressed" from="background/SubViewportContainer/Control/P_control/B_resultados" to="background/casimir" method="_on_b_resultados_pressed"]
+[connection signal="canceled" from="background/SubViewportContainer/Control/ConfirmationDialog" to="background/casimir" method="_on_confirmation_dialog_canceled"]

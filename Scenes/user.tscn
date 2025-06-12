@@ -1,0 +1,637 @@
+[gd_scene load_steps=31 format=3 uid="uid://cs6662g455nwy"]
+
+[ext_resource type="Script" path="res://Scripts/user.gd" id="1_w5yil"]
+[ext_resource type="Texture2D" uid="uid://dq0vhpkir7m24" path="res://images/User/iconsHome.png" id="2_sujhh"]
+[ext_resource type="FontFile" uid="uid://chsj2empaqna6" path="res://Fonts/bristone/Bristone.otf" id="3_3xy4c"]
+[ext_resource type="FontFile" uid="uid://bsgyw3bv8aaqs" path="res://Fonts/static/JosefinSans-BoldItalic.ttf" id="4_5hxxd"]
+[ext_resource type="FontFile" uid="uid://djm0skhwswm3h" path="res://Fonts/bristone/Bristone.ttf" id="5_07g0j"]
+[ext_resource type="Script" path="res://Scripts/Estadisticas_T.gd" id="5_icvs3"]
+[ext_resource type="Script" path="res://Scripts/ExportarPDF.gd" id="5_khp0u"]
+[ext_resource type="Script" path="res://addons/graph_2d/graph_2d.gd" id="6_ndate"]
+[ext_resource type="FontFile" uid="uid://dortdong88ekb" path="res://Fonts/static/JosefinSans-SemiBold.ttf" id="7_6rkd3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ua6jb"]
+bg_color = Color(0.141176, 0.0862745, 0.231373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3e2j"]
+bg_color = Color(0.486275, 0.266667, 0.521569, 0.294118)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6thdi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op65a"]
+bg_color = Color(0.247059, 0.247059, 0.247059, 0.509804)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5bf4"]
+bg_color = Color(0.321136, 0.255093, 0.440407, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ppn0"]
+bg_color = Color(0.277528, 0.277528, 0.277528, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxyl0"]
+bg_color = Color(0.278431, 0.278431, 0.278431, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6tqd"]
+bg_color = Color(0.582714, 0.320253, 0.339705, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etle6"]
+bg_color = Color(0.209633, 0.349404, 0.234007, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdgvu"]
+bg_color = Color(0.737255, 0.541176, 0.564706, 0.352941)
+draw_center = false
+expand_margin_left = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85fdi"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 15.0
+bg_color = Color(0.188028, 0.10179, 0.310488, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.456252, 0.217026, 0.460017, 1)
+
+[sub_resource type="Theme" id="Theme_hht67"]
+AcceptDialog/styles/embedded_border = SubResource("StyleBoxFlat_cdgvu")
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_85fdi")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k01j7"]
+bg_color = Color(0.188235, 0.101961, 0.309804, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.821624, 0.369174, 0.855868, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m15vo"]
+bg_color = Color(0.299336, 0.380885, 0.591618, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqlrf"]
+bg_color = Color(0.0823529, 0.0823529, 0.0823529, 0.427451)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob3tq"]
+bg_color = Color(0.318778, 0.189803, 0.377997, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.781901, 0.190751, 0.832164, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gihk2"]
+bg_color = Color(0.682456, 0.72191, 0.911986, 0.427451)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0bsg"]
+bg_color = Color(0.145098, 0.141176, 0.282353, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxvlv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.364706, 0, 0.682353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chhpl"]
+bg_color = Color(0.320531, 0.0482767, 0.358869, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sth8b"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.509804, 0.34902, 0.635294, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.490196)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[node name="User" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w5yil")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0235294, 0.00784314, 0.109804, 1)
+
+[node name="titulo" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 58.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ua6jb")
+
+[node name="Label_usuario" type="Label" parent="titulo"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 15.0
+offset_right = 490.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("3_3xy4c")
+theme_override_font_sizes/font_size = 30
+text = "¡ Hola ! "
+uppercase = true
+
+[node name="B_Home" type="Panel" parent="titulo"]
+layout_mode = 0
+offset_right = 79.0
+offset_bottom = 58.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v3e2j")
+
+[node name="Button_home" type="Button" parent="titulo/B_Home"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 15.0
+offset_right = 57.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6thdi")
+icon = ExtResource("2_sujhh")
+icon_alignment = 1
+
+[node name="P_datos" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 82.0
+offset_right = 440.0
+offset_bottom = 303.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_op65a")
+
+[node name="P_Titulo" type="Panel" parent="P_datos"]
+layout_mode = 0
+offset_top = -13.0
+offset_right = 418.0
+offset_bottom = 21.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5bf4")
+
+[node name="T_datos" type="Label" parent="P_datos/P_Titulo"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 267.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("4_5hxxd")
+theme_override_font_sizes/font_size = 20
+text = "DATOS PERSONALES"
+
+[node name="L_nombre" type="Label" parent="P_datos"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 54.0
+offset_right = 82.0
+offset_bottom = 77.0
+text = "Nombre"
+
+[node name="P_nombre" type="Panel" parent="P_datos/L_nombre"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = -4.0
+offset_right = 372.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ppn0")
+
+[node name="nombre_usuario" type="Label" parent="P_datos/L_nombre/P_nombre"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 291.0
+offset_bottom = 33.0
+
+[node name="L_correo" type="Label" parent="P_datos"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 107.0
+offset_right = 82.0
+offset_bottom = 130.0
+text = "Correo"
+
+[node name="P_correo" type="Panel" parent="P_datos/L_correo"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = -2.0
+offset_right = 369.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lxyl0")
+
+[node name="correo_usuario" type="Label" parent="P_datos/L_correo/P_correo"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 290.0
+offset_bottom = 29.0
+
+[node name="Button_CerrarSesion" type="Button" parent="P_datos"]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 164.0
+offset_right = 380.0
+offset_bottom = 203.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6tqd")
+text = "Cerrar Sesión"
+
+[node name="P_simulaciones" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 84.0
+offset_right = 1128.0
+offset_bottom = 304.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_op65a")
+
+[node name="P_Titulo" type="Panel" parent="P_simulaciones"]
+layout_mode = 0
+offset_top = -15.0
+offset_right = 668.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_etle6")
+
+[node name="Label" type="Label" parent="P_simulaciones/P_Titulo"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 191.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("4_5hxxd")
+theme_override_font_sizes/font_size = 22
+text = "simulaciones"
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="P_simulaciones"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 26.0
+offset_right = 510.0
+offset_bottom = 52.0
+
+[node name="l_ID" type="Label" parent="P_simulaciones/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "ID      "
+horizontal_alignment = 1
+
+[node name="l_nombre" type="Label" parent="P_simulaciones/HBoxContainer"]
+layout_mode = 2
+text = "Nombre                        "
+
+[node name="l_fecha" type="Label" parent="P_simulaciones/HBoxContainer"]
+layout_mode = 2
+text = "Fecha                              "
+
+[node name="l_des" type="Label" parent="P_simulaciones/HBoxContainer"]
+layout_mode = 2
+text = "Descripción"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="P_simulaciones"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 64.0
+offset_right = 660.0
+offset_bottom = 208.0
+
+[node name="HistorialVBox" type="VBoxContainer" parent="P_simulaciones/ScrollContainer"]
+layout_mode = 2
+
+[node name="B_Historial" type="Button" parent="P_simulaciones"]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 26.0
+offset_right = 660.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 12
+text = "Borrar historial"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="P_simulaciones"]
+auto_translate_mode = 1
+title = ""
+position = Vector2i(0, 36)
+size = Vector2i(439, 100)
+borderless = true
+mouse_passthrough = true
+theme = SubResource("Theme_hht67")
+ok_button_text = "Aceptar"
+dialog_text = "¿Estás seguro de que deseas eliminar esta simulación?"
+cancel_button_text = "Cancelar"
+
+[node name="PopupPanel" type="PopupPanel" parent="P_simulaciones"]
+size = Vector2i(300, 30)
+theme_override_styles/panel = SubResource("StyleBoxFlat_k01j7")
+
+[node name="Label" type="Label" parent="P_simulaciones/PopupPanel"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 299.0
+offset_bottom = 29.0
+
+[node name="P_estadisticas" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 321.0
+offset_right = 1124.0
+offset_bottom = 636.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_op65a")
+script = ExtResource("5_khp0u")
+
+[node name="P_Titulo" type="Panel" parent="P_estadisticas"]
+layout_mode = 0
+offset_right = 1100.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m15vo")
+
+[node name="T_datos" type="Label" parent="P_estadisticas/P_Titulo"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 267.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("4_5hxxd")
+theme_override_font_sizes/font_size = 20
+text = "ESTADISTICAS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="P_estadisticas"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 1073.0
+offset_bottom = 299.0
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="P_estadisticas/HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="P_estadisticas/HBoxContainer/Control"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 10.0
+offset_right = 1063.0
+offset_bottom = 251.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqlrf")
+
+[node name="Panel3" type="Panel" parent="P_estadisticas/HBoxContainer/Control/Panel2"]
+layout_mode = 0
+offset_left = -484.0
+offset_right = -25.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqlrf")
+
+[node name="Panel" type="Panel" parent="P_estadisticas/HBoxContainer/Control"]
+layout_mode = 0
+offset_left = 147.0
+offset_right = 632.0
+offset_bottom = 72.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ob3tq")
+
+[node name="Label" type="Label" parent="P_estadisticas/HBoxContainer/Control/Panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 23.0
+offset_right = 459.0
+offset_bottom = 46.0
+text = "Selecciona una simulación para visualizar las estadísticas"
+
+[node name="Control2" type="Control" parent="P_estadisticas/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("5_icvs3")
+
+[node name="Estadis" type="Panel" parent="P_estadisticas/HBoxContainer/Control2"]
+layout_mode = 0
+offset_left = -7.0
+offset_right = 474.0
+offset_bottom = 251.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gihk2")
+
+[node name="l_ID" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 75.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("7_6rkd3")
+theme_override_font_sizes/font_size = 21
+text = "id"
+
+[node name="l_titulo" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 10.0
+offset_right = 476.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("5_07g0j")
+text = "tunel cuantico"
+
+[node name="desc" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 167.0
+offset_right = 114.0
+offset_bottom = 203.0
+theme_override_colors/font_color = Color(0.290196, 0.0196078, 0.321569, 1)
+theme_override_fonts/font = ExtResource("4_5hxxd")
+theme_override_font_sizes/font_size = 19
+text = "Descripción:"
+
+[node name="l_des" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/desc"]
+layout_mode = 0
+offset_left = 119.0
+offset_right = 464.0
+offset_bottom = 23.0
+text = "de"
+autowrap_mode = 3
+
+[node name="param" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 59.0
+offset_right = 114.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.289647, 0.0208234, 0.322181, 1)
+theme_override_fonts/font = ExtResource("4_5hxxd")
+theme_override_font_sizes/font_size = 19
+text = "Parámetros:
+"
+
+[node name="l_E" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/param"]
+layout_mode = 0
+offset_left = 119.0
+offset_right = 231.0
+offset_bottom = 23.0
+text = "Energía ="
+
+[node name="l_A" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/param"]
+layout_mode = 0
+offset_left = 231.0
+offset_right = 334.0
+offset_bottom = 23.0
+text = "Ancho ="
+
+[node name="l_P" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/param"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 474.0
+offset_bottom = 23.0
+text = "Particulas ="
+
+[node name="resultados" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 95.0
+offset_right = 114.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0.290196, 0.0196078, 0.321569, 1)
+theme_override_fonts/font = ExtResource("4_5hxxd")
+theme_override_font_sizes/font_size = 19
+text = "Resultados:"
+
+[node name="l_atra" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/resultados"]
+layout_mode = 0
+offset_left = 119.0
+offset_right = 263.0
+offset_bottom = 23.0
+text = "\"atravesaron\": 2"
+
+[node name="l_rebo" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/resultados"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 36.0
+offset_right = 263.0
+offset_bottom = 59.0
+text = "\"atravesaron\": 2"
+
+[node name="l_tiempo" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/resultados"]
+layout_mode = 0
+offset_left = 285.0
+offset_right = 429.0
+offset_bottom = 23.0
+text = "\"atravesaron\": 2"
+
+[node name="l_interf" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Estadis/resultados"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 36.0
+offset_right = 429.0
+offset_bottom = 59.0
+text = "\"atravesaron\": 2"
+
+[node name="Grafico" type="Panel" parent="P_estadisticas/HBoxContainer/Control2"]
+layout_mode = 0
+offset_left = 486.0
+offset_right = 1072.0
+offset_bottom = 251.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gihk2")
+
+[node name="Graph2D" type="Control" parent="P_estadisticas/HBoxContainer/Control2/Grafico"]
+anchors_preset = 0
+offset_right = 355.0
+offset_bottom = 251.0
+mouse_filter = 2
+mouse_default_cursor_shape = 7
+script = ExtResource("6_ndate")
+x_max = 2.5
+y_max = 20.0
+background_color = Color(0.0766654, 0.0721476, 0.218222, 0.772549)
+grid_horizontal_visible = true
+grid_vertical_visible = true
+
+[node name="Panel" type="Panel" parent="P_estadisticas/HBoxContainer/Control2"]
+layout_mode = 0
+offset_left = 841.0
+offset_right = 1072.0
+offset_bottom = 251.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w0bsg")
+
+[node name="B_pdf" type="Button" parent="P_estadisticas/HBoxContainer/Control2/Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 118.0
+offset_right = 170.0
+offset_bottom = 161.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_vxvlv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_chhpl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sth8b")
+text = "Exportar PDF"
+
+[node name="Label" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Panel"]
+layout_mode = 0
+offset_top = 33.0
+offset_right = 222.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 13
+text = "¿Deseas Exportar las estadísticas de la simulación seleccionada ?"
+autowrap_mode = 2
+
+[node name="Mensaje" type="Label" parent="P_estadisticas/HBoxContainer/Control2/Panel"]
+layout_mode = 0
+offset_top = 189.0
+offset_right = 236.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 2
+
+[connection signal="pressed" from="titulo/B_Home/Button_home" to="." method="_on_button_home_pressed"]
+[connection signal="pressed" from="P_datos/Button_CerrarSesion" to="." method="_on_button_cerrar_sesion_pressed"]
+[connection signal="pressed" from="P_simulaciones/B_Historial" to="." method="_on_b_historial_pressed"]
+[connection signal="pressed" from="P_estadisticas/HBoxContainer/Control2/Panel/B_pdf" to="P_estadisticas" method="_on_b_pdf_pressed"]

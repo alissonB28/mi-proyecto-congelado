@@ -1,0 +1,485 @@
+[gd_scene load_steps=28 format=3 uid="uid://87q8nu4mcqtn"]
+
+[ext_resource type="Script" path="res://Scripts/swipe_login.gd" id="1_4x48c"]
+[ext_resource type="FontFile" uid="uid://chsj2empaqna6" path="res://Fonts/bristone/Bristone.otf" id="1_vr4nd"]
+[ext_resource type="FontFile" uid="uid://bsgyw3bv8aaqs" path="res://Fonts/static/JosefinSans-BoldItalic.ttf" id="2_8irj6"]
+[ext_resource type="Script" path="res://Scripts/login.gd" id="2_qefdl"]
+[ext_resource type="FontFile" uid="uid://daruwqg5bnjee" path="res://Fonts/static/JosefinSans-Bold.ttf" id="3_30ycw"]
+[ext_resource type="FontFile" uid="uid://dortdong88ekb" path="res://Fonts/static/JosefinSans-SemiBold.ttf" id="4_4fmvw"]
+[ext_resource type="Script" path="res://Scripts/registro.gd" id="6_bwdlu"]
+
+[sub_resource type="FontVariation" id="FontVariation_ficbo"]
+base_font = ExtResource("2_8irj6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfac4"]
+content_margin_top = 50.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_1lfed"]
+base_font = ExtResource("4_4fmvw")
+spacing_top = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u6jp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.364169, 0.00167225, 0.681543, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7limq"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.352941)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="FontVariation" id="FontVariation_b3b8m"]
+base_font = ExtResource("3_30ycw")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exni7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.364706, 0, 0.682353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn88x"]
+bg_color = Color(0.320531, 0.0482767, 0.358869, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jnsw"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.509804, 0.34902, 0.635294, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.490196)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdlde"]
+bg_color = Color(0.188235, 0, 0.372549, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1pu2"]
+bg_color = Color(0.133333, 0.0980392, 0.027451, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4mr6"]
+bg_color = Color(0.364706, 0, 0.682353, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.364706, 0, 0.682353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwf1o"]
+bg_color = Color(0.321569, 0.0470588, 0.360784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jlt4"]
+bg_color = Color(0.511021, 0.34816, 0.636591, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.32549)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8stg8"]
+bg_color = Color(0.188235, 0, 0.372549, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1tna"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.364706, 0, 0.682353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm103"]
+bg_color = Color(0.321569, 0.0470588, 0.360784, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_wt2tx"]
+resource_name = "Login"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animacion:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(567, -1), Vector2(-567, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_hogbf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animacion:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-567, -1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ramhx"]
+_data = {
+"Login": SubResource("Animation_wt2tx"),
+"RESET": SubResource("Animation_hogbf")
+}
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 115.0
+offset_right = 430.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("1_vr4nd")
+theme_override_font_sizes/font_size = 35
+text = " Evanesce"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 136.0
+offset_right = 1014.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("1_vr4nd")
+theme_override_font_sizes/font_size = 35
+text = "Evanesce"
+
+[node name="MC_Login" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 110.0
+offset_right = 1041.0
+offset_bottom = 548.0
+script = ExtResource("2_qefdl")
+
+[node name="CenterContainer" type="CenterContainer" parent="MC_Login"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MC_Login/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MC_Login/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.996574, 0.711934, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_ficbo")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_tfac4")
+text = "Login"
+
+[node name="MarginContainer" type="MarginContainer" parent="MC_Login/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit_correo" type="LineEdit" parent="MC_Login/CenterContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_1lfed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1u6jp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7limq")
+placeholder_text = "Correo Electrónico"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MC_Login/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit_contrasena" type="LineEdit" parent="MC_Login/CenterContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_1lfed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1u6jp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7limq")
+placeholder_text = "Contraseña"
+secret = true
+secret_character = "*"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MC_Login/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button_login" type="Button" parent="MC_Login/CenterContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_b3b8m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_exni7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sn88x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2jnsw")
+text = "INICIAR SESIÓN"
+
+[node name="MarginContainer4" type="MarginContainer" parent="MC_Login/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_error" type="Label" parent="MC_Login/CenterContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.780685, 7.3255e-05, 4.07186e-05, 1)
+horizontal_alignment = 1
+
+[node name="MC_Registro" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 97.0
+offset_right = 461.0
+offset_bottom = 535.0
+script = ExtResource("6_bwdlu")
+
+[node name="CenterContainer" type="CenterContainer" parent="MC_Registro"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MC_Registro/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MC_Registro/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.996574, 0.711934, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_ficbo")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_tfac4")
+text = "Registro"
+
+[node name="MarginContainer" type="MarginContainer" parent="MC_Registro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit_nombre" type="LineEdit" parent="MC_Registro/CenterContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_1lfed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1u6jp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7limq")
+placeholder_text = "Nombre"
+
+[node name="MarginContainer4" type="MarginContainer" parent="MC_Registro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit_correo" type="LineEdit" parent="MC_Registro/CenterContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_1lfed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1u6jp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7limq")
+placeholder_text = "Correo Electrónico"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MC_Registro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit_contrasena" type="LineEdit" parent="MC_Registro/CenterContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_1lfed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1u6jp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7limq")
+placeholder_text = "Contraseña"
+secret = true
+secret_character = "*"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MC_Registro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button_registrar" type="Button" parent="MC_Registro/CenterContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_b3b8m")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_exni7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sn88x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2jnsw")
+text = "REGISTRARSE"
+
+[node name="MarginContainer5" type="MarginContainer" parent="MC_Registro/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_info" type="Label" parent="MC_Registro/CenterContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Animacion" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -567.0
+offset_top = -1.0
+offset_right = 582.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mdlde")
+script = ExtResource("1_4x48c")
+
+[node name="login" type="Panel" parent="Animacion"]
+layout_mode = 0
+offset_left = 568.0
+offset_right = 1147.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1pu2")
+
+[node name="Label" type="Label" parent="Animacion/login"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 252.0
+offset_right = 529.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("1_vr4nd")
+theme_override_font_sizes/font_size = 35
+text = "HOLA, BIENVENIDO!"
+
+[node name="Label2" type="Label" parent="Animacion/login"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 322.0
+offset_right = 381.0
+offset_bottom = 345.0
+theme_override_fonts/font = ExtResource("2_8irj6")
+theme_override_font_sizes/font_size = 20
+text = "¿ No tienes una cuenta ?"
+
+[node name="B_registrar" type="Button" parent="Animacion/login"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 355.0
+offset_right = 353.0
+offset_bottom = 400.0
+theme_override_fonts/font = ExtResource("3_30ycw")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxFlat_l4mr6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dwf1o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2jlt4")
+text = "Registrarme"
+
+[node name="logout" type="Panel" parent="Animacion"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -6.0
+offset_right = 572.0
+offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8stg8")
+
+[node name="Label" type="Label" parent="Animacion/logout"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 222.0
+offset_right = 477.0
+offset_bottom = 321.0
+theme_override_fonts/font = ExtResource("1_vr4nd")
+theme_override_font_sizes/font_size = 35
+text = "BIENVENIDO de
+       nuevo!"
+
+[node name="Label2" type="Label" parent="Animacion/logout"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 341.0
+offset_right = 394.0
+offset_bottom = 364.0
+theme_override_fonts/font = ExtResource("2_8irj6")
+theme_override_font_sizes/font_size = 20
+text = "¿ Ya tienes una cuenta?"
+
+[node name="B_inicio" type="Button" parent="Animacion/logout"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 368.0
+offset_right = 368.0
+offset_bottom = 422.0
+theme_override_fonts/font = ExtResource("3_30ycw")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxFlat_l1tna")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bm103")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2jlt4")
+text = "Iniciar Sesión"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animacion"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ramhx")
+}
+
+[connection signal="pressed" from="MC_Login/CenterContainer/VBoxContainer/MarginContainer2/Button_login" to="MC_Login" method="_on_button_login_pressed"]
+[connection signal="pressed" from="MC_Registro/CenterContainer/VBoxContainer/MarginContainer2/Button_registrar" to="MC_Registro" method="_on_button_registrar_pressed"]
+[connection signal="pressed" from="Animacion/login/B_registrar" to="Animacion" method="_on_b_registrar_pressed"]
+[connection signal="pressed" from="Animacion/logout/B_inicio" to="Animacion" method="_on_b_inicio_pressed"]

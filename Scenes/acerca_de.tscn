@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgpl48oxcqyng"]
+
+[ext_resource type="Script" path="res://Scripts/acerca_de.gd" id="1_ak075"]
+[ext_resource type="Texture2D" uid="uid://bluaftrde1cw3" path="res://images/acerca_de/panoramic.jpg" id="1_s8yp4"]
+[ext_resource type="Theme" uid="uid://qia3srrfv0b7" path="res://windows_10_dark/theme.tres" id="3_17ycl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atdsv"]
+bg_color = Color(0.141176, 0.0862745, 0.231373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqrpj"]
+bg_color = Color(0.486275, 0.266667, 0.521569, 0.294118)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl36y"]
+bg_color = Color(0.268075, 0.261726, 0.295096, 0.843137)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_euekv"]
+bg_color = Color(0.280603, 0.181141, 0.344674, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Acerca_de" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ak075")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_s8yp4")
+expand_mode = 1
+
+[node name="Titulo" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 83.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_atdsv")
+
+[node name="Label" type="Label" parent="Titulo"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 13.0
+offset_right = 342.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 40
+text = "Acerca de Evanesce"
+
+[node name="Panel2" type="Panel" parent="Titulo"]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 84.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqrpj")
+
+[node name="body" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 122.0
+offset_right = 1034.0
+offset_bottom = 605.0
+
+[node name="Panel" type="Panel" parent="body"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 44.0
+offset_right = 846.0
+offset_bottom = 390.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xl36y")
+
+[node name="Label" type="Label" parent="body/Panel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 20.0
+offset_right = 763.0
+offset_bottom = 329.0
+text = "Evanesce es una aplicación educativa que hace accesible la mecánica cuántica mediante 
+simulaciones interactivas y explicaciones claras. Los usuarios pueden explorar fenómenos 
+en escenas 3D desarrolladas en Godot 4.
+
+La aplicación se ejecuta localmente, sin necesidad de internet, e incluye estadísticas visuales, 
+para una experiencia inmersiva. Con Evanesce, aprender sobre el mundo 
+cuántico es más fácil e intuitivo.
+ 
+                                             ¡Explora, experimenta y aprende!
+
+Desarrollado por Alisson Veloz. 
+Versión 1.0"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.795
+anchor_top = 0.852
+anchor_right = 0.795
+anchor_bottom = 0.852
+offset_left = -93.84
+offset_top = -20.096
+offset_right = 94.16
+offset_bottom = 19.904
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_17ycl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_euekv")
+text = "Regresar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

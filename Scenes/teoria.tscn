@@ -1,0 +1,1948 @@
+[gd_scene load_steps=74 format=3 uid="uid://hg25td6ynnbr"]
+
+[ext_resource type="Script" path="res://Scripts/home_teoria.gd" id="1_gofxq"]
+[ext_resource type="Texture2D" uid="uid://d3fu2hspso8b7" path="res://images/Teoria/icons_ibro.svg" id="1_rkwiu"]
+[ext_resource type="Texture2D" uid="uid://pdy0tn30jt47" path="res://images/Teoria/icon_rendija.svg" id="2_x81p0"]
+[ext_resource type="PackedScene" uid="uid://bp5g46jm47afp" path="res://Scenes/rendija.tscn" id="3_ntv2p"]
+[ext_resource type="Texture2D" uid="uid://cydg1mrbvf3jf" path="res://images/Teoria/icon_ast.png" id="4_2fjm3"]
+[ext_resource type="Texture2D" uid="uid://bu7lrgkdqduyt" path="res://images/Teoria/icon_particula.svg" id="5_vsvq5"]
+[ext_resource type="Texture2D" uid="uid://d5prpa0o6b3w" path="res://images/Teoria/icon_tunel.svg" id="6_n6lqc"]
+[ext_resource type="Texture2D" uid="uid://bpq3f5rrut855" path="res://images/Teoria/icon_entrel.svg" id="7_sq7ig"]
+[ext_resource type="Texture2D" uid="uid://db5soodbq1g5m" path="res://images/Teoria/icon_casimir.svg" id="8_2s4u3"]
+[ext_resource type="FontFile" uid="uid://djm0skhwswm3h" path="res://Fonts/bristone/Bristone.ttf" id="9_6txxm"]
+[ext_resource type="Texture2D" uid="uid://cacdkn5pl2rkb" path="res://images/Teoria/iconsHome.svg" id="9_plv34"]
+[ext_resource type="FontFile" uid="uid://bnvc0u0phxx18" path="res://windows_10_dark/assets/fonts/segoeUI/Segoe UI Bold Italic.ttf" id="10_c3j5e"]
+[ext_resource type="FontFile" uid="uid://bsgyw3bv8aaqs" path="res://Fonts/static/JosefinSans-BoldItalic.ttf" id="11_eoj1n"]
+[ext_resource type="Texture2D" uid="uid://drqy45klykhxx" path="res://images/Teoria/2_rend.jpg" id="12_gj1m7"]
+[ext_resource type="FontFile" uid="uid://c0w47dt8hxe1k" path="res://windows_10_dark/assets/fonts/segoeUI/Segoe UI Italic.ttf" id="12_p1aj5"]
+[ext_resource type="VideoStream" path="res://images/Teoria/particulas_ren.ogv" id="13_xaf6y"]
+[ext_resource type="Texture2D" uid="uid://1ycq8j3oryev" path="res://images/Teoria/caja.png" id="14_lmtr5"]
+[ext_resource type="Texture2D" uid="uid://jssbx45t3v3x" path="res://images/Teoria/E1_Caja.png" id="15_uxtxn"]
+[ext_resource type="Texture2D" uid="uid://ctebnu87sljio" path="res://images/Teoria/E2_caja.png" id="16_sjn14"]
+[ext_resource type="Texture2D" uid="uid://durg6382aak6w" path="res://images/Teoria/E3_caja.png" id="17_jlrwm"]
+[ext_resource type="VideoStream" path="res://images/Teoria/pozo.ogv" id="18_jyu4y"]
+[ext_resource type="Texture2D" uid="uid://dwjp7pvi41exx" path="res://images/Teoria/descarga.jpg" id="19_04fne"]
+[ext_resource type="VideoStream" path="res://images/Teoria/entrelazamiento.ogv" id="20_ywmbc"]
+[ext_resource type="Texture2D" uid="uid://ce8g2l1ukqndi" path="res://images/Teoria/Tunel.png" id="21_gpi0g"]
+[ext_resource type="Texture2D" uid="uid://d0riugtflwewm" path="res://images/Teoria/casimirEs.png" id="21_qixdr"]
+[ext_resource type="Texture2D" uid="uid://c7mealt5f7kjx" path="res://images/Teoria/placas.png" id="22_jgi5t"]
+[ext_resource type="Texture2D" uid="uid://dsbpkl61xj1dn" path="res://images/Teoria/simula_tunel.png" id="22_miyur"]
+[ext_resource type="Texture2D" uid="uid://8matvxfis7jp" path="res://images/Teoria/sl_En.png" id="23_evm5t"]
+[ext_resource type="Texture2D" uid="uid://n3uiftio2htd" path="res://images/Teoria/sl_P.png" id="24_fxdtj"]
+[ext_resource type="Texture2D" uid="uid://bsxp8ncobqv3f" path="res://images/Teoria/sl_D.png" id="24_wo8xp"]
+[ext_resource type="Texture2D" uid="uid://biig8e3n18tm2" path="res://images/Teoria/sl_an.png" id="25_gu77w"]
+[ext_resource type="VideoStream" path="res://images/Teoria/tun.ogv" id="26_fka33"]
+[ext_resource type="Texture2D" uid="uid://ctf3a7c7h7yia" path="res://images/Teoria/sl_M.png" id="26_sux1r"]
+[ext_resource type="FontFile" uid="uid://daruwqg5bnjee" path="res://Fonts/static/JosefinSans-Bold.ttf" id="27_6whe6"]
+[ext_resource type="Texture2D" uid="uid://bbpjpg8fi80t4" path="res://images/Teoria/sl_A.png" id="28_wl8f2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2adg"]
+bg_color = Color(0.141199, 0.0865343, 0.230691, 1)
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03hvi"]
+bg_color = Color(0.18433, 0.0812115, 0.227068, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj0qn"]
+bg_color = Color(0.685194, 0.518141, 0.815852, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkecq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_es182"]
+
+[sub_resource type="Theme" id="Theme_8fctp"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_03hvi")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_pj0qn")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_vkecq")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_es182")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn07b"]
+bg_color = Color(0.196078, 0.113725, 0.168627, 0.8)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjgtn"]
+bg_color = Color(0.760161, 0.614041, 0.230492, 0.654902)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8dx2"]
+bg_color = Color(0.239633, 0.178929, 0.094979, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1y0m"]
+bg_color = Color(0.27451, 0.215686, 0.054902, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oicyb"]
+bg_color = Color(0.077833, 0.0869304, 0.0869306, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xf71"]
+bg_color = Color(0.507464, 0.442537, 0.373876, 0.764706)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsc7i"]
+bg_color = Color(0.422797, 0.678313, 0.329819, 0.823529)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n00v0"]
+bg_color = Color(0.340149, 0.547643, 0.370353, 0.317647)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0wd8"]
+bg_color = Color(0.45098, 0.580392, 0.439216, 0.529412)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u04my"]
+bg_color = Color(0.358487, 0.605904, 0.934683, 0.760784)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnofw"]
+bg_color = Color(0.00998501, 0.15782, 0.349146, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjsmc"]
+bg_color = Color(0.443137, 0.639216, 0.980392, 0.486275)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo8ad"]
+bg_color = Color(0.67451, 0.470588, 0.984314, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb8r3"]
+bg_color = Color(0.258824, 0, 0.368627, 0.709804)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f16yn"]
+bg_color = Color(0.5315, 0.217109, 0.587396, 0.517647)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="FontVariation" id="FontVariation_k0kxo"]
+base_font = ExtResource("27_6whe6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nod6u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.364706, 0, 0.682353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gubmo"]
+bg_color = Color(0.320531, 0.0482767, 0.358869, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tghor"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.509804, 0.34902, 0.635294, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.490196)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5ylm"]
+bg_color = Color(0.889159, 0.439834, 0.496585, 0.764706)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu0m3"]
+bg_color = Color(0.533333, 0.313726, 0.27451, 0.486275)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkb7s"]
+bg_color = Color(0.890196, 0.45098, 0.411765, 0.470588)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5an3"]
+bg_color = Color(0.178861, 0.128194, 0.177453, 0.698039)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7erx"]
+bg_color = Color(0.497633, 0.384172, 0, 0.745098)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hm8vs"]
+bg_color = Color(0.65098, 0.6, 0.423529, 0.654902)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecdmj"]
+bg_color = Color(0.623529, 0.596078, 0.552941, 0.329412)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ildx"]
+bg_color = Color(1, 1, 1, 0.172549)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Animation" id="Animation_lh2vl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Slidebar:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(70, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tvip5"]
+resource_name = "side_bar_anim"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Slidebar:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(70, 0), Vector2(170, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dxs63"]
+_data = {
+"RESET": SubResource("Animation_lh2vl"),
+"side_bar_anim": SubResource("Animation_tvip5")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2oh86"]
+bg_color = Color(0.0941176, 0.054902, 0.27451, 1)
+corner_radius_bottom_right = 600
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng1mm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_bottom_right = 55
+
+[node name="Teoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0222356, 0.00806851, 0.111531, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Slidebar" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e2adg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Slidebar"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="top_Container" type="VBoxContainer" parent="HBoxContainer/Slidebar/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="home_teoria" type="Control" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container"]
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+script = ExtResource("1_gofxq")
+
+[node name="bg" type="ColorRect" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container/home_teoria"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.254902, 0.0941176, 0.403922, 0.952941)
+
+[node name="IconsIbro" type="Sprite2D" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container/home_teoria"]
+position = Vector2(34, 25)
+scale = Vector2(0.87069, 0.87069)
+texture = ExtResource("1_rkwiu")
+
+[node name="bienvenida" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container" instance=ExtResource("3_ntv2p")]
+layout_mode = 2
+icon = ExtResource("4_2fjm3")
+label = "Bienvenido"
+page = NodePath("../../../../../home_b")
+scroll_container = NodePath("../../../../ScrollContainer")
+
+[node name="Rendija" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container" instance=ExtResource("3_ntv2p")]
+layout_mode = 2
+icon = ExtResource("2_x81p0")
+label = "Doble Rendija"
+active = false
+page = NodePath("../../../../ScrollContainer/body/pages/rendija_t")
+scroll_container = NodePath("../../../../ScrollContainer")
+
+[node name="Particula" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container" instance=ExtResource("3_ntv2p")]
+layout_mode = 2
+icon = ExtResource("5_vsvq5")
+label = "Partículas"
+active = false
+page = NodePath("../../../../ScrollContainer/body/pages/particula_t")
+scroll_container = NodePath("../../../../ScrollContainer")
+
+[node name="Tunel" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container" instance=ExtResource("3_ntv2p")]
+layout_mode = 2
+icon = ExtResource("6_n6lqc")
+label = "Túnel Cuántico"
+active = false
+page = NodePath("../../../../ScrollContainer/body/pages/tunel_t")
+scroll_container = NodePath("../../../../ScrollContainer")
+
+[node name="Entrelaza" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container" instance=ExtResource("3_ntv2p")]
+layout_mode = 2
+icon = ExtResource("7_sq7ig")
+label = "Entrelazar"
+active = false
+page = NodePath("../../../../ScrollContainer/body/pages/entrelazar_t")
+scroll_container = NodePath("../../../../ScrollContainer")
+
+[node name="Efecto" parent="HBoxContainer/Slidebar/VBoxContainer/top_Container" instance=ExtResource("3_ntv2p")]
+layout_mode = 2
+icon = ExtResource("8_2s4u3")
+label = "Efecto Casimir"
+active = false
+page = NodePath("../../../../ScrollContainer/body/pages/efecto_t")
+scroll_container = NodePath("../../../../ScrollContainer")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_8fctp")
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="body" type="VBoxContainer" parent="HBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="pages" type="Control" parent="HBoxContainer/ScrollContainer/body"]
+custom_minimum_size = Vector2(0, 2100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="rendija_t" type="Control" parent="HBoxContainer/ScrollContainer/body/pages"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titulo" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 942.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bn07b")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/titulo"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 14.0
+offset_right = 436.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 35
+text = "Doble Rendija"
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/titulo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -20.5
+offset_right = 43.0
+offset_bottom = 8.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjgtn")
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/titulo"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 103.0
+offset_right = 917.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8dx2")
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 127.0
+offset_right = 943.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1y0m")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 19.0
+offset_right = 880.0
+offset_bottom = 128.0
+text = "El experimento de la doble rendija es uno de los experimentos más famosos y fundamentales de la física
+ cuántica. Fue propuesto inicialmente por Thomas Young en 1801 para estudiar la naturaleza de la luz, pero en
+ el siglo XX se realizó con electrones y otras partículas, revelando comportamientos sorprendentes que
+ desafían nuestra intuición clásica."
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.266
+anchor_top = 0.232
+anchor_right = 0.266
+anchor_bottom = 0.232
+offset_left = -242.39
+offset_top = 117.072
+offset_right = 670.61
+offset_bottom = 1919.07
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oicyb")
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 32.0
+offset_right = 886.0
+offset_bottom = 85.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xf71")
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 1016.0
+offset_right = 890.0
+offset_bottom = 1069.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xf71")
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 614.0
+offset_right = 884.0
+offset_bottom = 667.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xf71")
+
+[node name="fase_1" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 884.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "📝 Fase 1: La versión clásica del experimento"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel/fase_1"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 50.0
+offset_right = 837.0
+offset_bottom = 547.0
+theme_override_font_sizes/font_size = 15
+text = "🔹 Paso 1: Usando partículas macroscópicas (balas, canicas, etc.)
+	Supongamos que disparamos pequeñas bolas (canicas o balas) hacia una barrera con dos rendijas.
+Si tapamos una rendija, las balas pasan solo por la otra y forman una única franja en la pantalla.
+Si ambas rendijas están abiertas, las balas se dividen en dos grupos y forman dos franjas en la pantalla (una detrás 
+de cada rendija).
+Es lo que esperaríamos en un mundo clásico: cada partícula pasa por una rendija o la otra y sigue su camino sin 
+interferencias.
+
+🔹 Paso 2: Usando ondas (como el agua o el sonido)Ahora, en lugar de balas, enviamos ondas de agua hacia la
+      barrera con dos rendijas.
+
+Cuando la ola golpea las dos rendijas, se divide en dos ondas nuevas que emergen por cada rendija.
+Estas dos ondas se superponen y crean un patrón de interferencia en la pantalla:
+       Zonas brillantes = interferencia constructiva (las crestas de las ondas se suman).
+       Zonas oscuras = interferencia destructiva (una cresta y un valle se cancelan).
+En la pantalla se forma un patrón de múltiples franjas, en lugar de solo dos.
+
+🔹 Conclusión clásica:
+Si las partículas se comportan como objetos sólidos, forman dos franjas.
+Si se comportan como ondas, crean un patrón de interferencia.
+"
+
+[node name="fase_2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 629.0
+offset_right = 713.0
+offset_bottom = 661.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "📝 Fase 2: Experimento con electrones (lo cuántico)"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel/fase_2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 40.0
+offset_right = 779.0
+offset_bottom = 362.0
+theme_override_font_sizes/font_size = 15
+text = "Ahora repetimos el experimento con electrones, que sabemos que son partículas.
+
+🔹 Paso 1: Disparando electrones uno a uno
+Si disparamos un solo electrón cada vez hacia la barrera:
+
+Al principio, parece que cada electrón impacta aleatoriamente en la pantalla.
+Pero tras disparar muchos electrones, aparece el patrón de interferencia.
+¡Los electrones, que son partículas, están formando un patrón de ondas!
+🔹 Conclusión inesperada:
+Cada electrón parece pasar por ambas rendijas al mismo tiempo, como si fuera una onda, y se interfiriera 
+consigo mismo.
+
+Esto contradice la lógica clásica, donde cada partícula debería pasar por una sola rendija."
+
+[node name="fase_3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 1030.0
+offset_right = 887.0
+offset_bottom = 1062.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🧠 ¿Qué significa esto en mecánica cuántica?"
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel/fase_3"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 49.0
+offset_right = 845.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 15
+text = "Este experimento demuestra principios fundamentales de la física cuántica:
+
+🔹 1️.Dualidad onda-partícula
+Los electrones (y todas las partículas cuánticas) pueden comportarse como ondas y como partículas dependiendo 
+del contexto.
+🔹 2️. Superposición cuántica
+Antes de ser medido, un electrón no está en un solo lugar: está en una superposición de estados, pasando por ambas
+ rendijas al mismo tiempo.
+🔹 3️. Colapso de la función de onda
+Cuando observamos qué rendija usa el electrón, la \"onda de probabilidad\" colapsa y el electrón se comporta como 
+una partícula clásica.
+🔹 4️. El observador afecta el experimento
+La medición cambia el resultado, lo que sugiere que la observación tiene un papel activo en la realidad cuántica."
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 1419.0
+offset_right = 238.0
+offset_bottom = 1686.0
+texture = ExtResource("12_gj1m7")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 1396.0
+offset_right = 886.0
+offset_bottom = 1684.0
+stream = ExtResource("13_xaf6y")
+autoplay = true
+loop = true
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 1702.0
+offset_right = 817.0
+offset_bottom = 1777.0
+text = "Aquí podemos observar que la particula esta comportandose como onda, 
+asi creando un patrón de interferencia , esto debido a que esta siendo
+observada."
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/rendija_t/body/Panel"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 1704.0
+offset_right = 236.0
+offset_bottom = 1779.0
+text = "Patrón de la particula 
+al no ser observada"
+
+[node name="particula_t" type="Control" parent="HBoxContainer/ScrollContainer/body/pages"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titulo" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 942.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bn07b")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/titulo"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 14.0
+offset_right = 436.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 35
+text = "Particula en una caja"
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/titulo"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 24.0
+offset_right = 51.0
+offset_bottom = 52.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lsc7i")
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 127.0
+offset_right = 943.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1y0m")
+
+[node name="introduc" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 14.0
+offset_right = 911.0
+offset_bottom = 157.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n00v0")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/introduc"]
+layout_mode = 0
+offset_left = -331.0
+offset_top = -7.0
+offset_right = -14.0
+offset_bottom = 147.0
+texture = ExtResource("14_lmtr5")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/introduc"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 551.0
+offset_bottom = 129.0
+text = "La partícula en una caja es un modelo de la mecánica cuántica que 
+describe cómo una partícula se comporta cuando está confinada
+en un espacio limitado por barreras impenetrables. Es clave para 
+entender la cuantización de la energía en sistemas cuánticos."
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.662
+anchor_top = 0.5
+anchor_right = 0.662
+anchor_bottom = 0.5
+offset_left = -604.73
+offset_top = 112.5
+offset_right = 308.27
+offset_bottom = 1891.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oicyb")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 877.0
+offset_bottom = 70.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h0wd8")
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 335.0
+offset_right = 865.0
+offset_bottom = 381.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h0wd8")
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 646.0
+offset_right = 875.0
+offset_bottom = 692.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h0wd8")
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 895.0
+offset_right = 875.0
+offset_bottom = 941.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h0wd8")
+
+[node name="fase_1" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 35.0
+offset_right = 878.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "📌 Planteamiento del Problema
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_1"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 36.0
+offset_right = 842.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 15
+text = "Se considera una partícula de masa 𝑚 dentro de una caja unidimensional de longitud 𝐿 , con barreras de potencial 
+infinito en los extremos.
+Matemáticamente, el potencial se define como:"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_1"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 110.0
+offset_right = 556.0
+offset_bottom = 215.0
+texture = ExtResource("15_uxtxn")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_1"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 222.0
+offset_right = 794.0
+offset_bottom = 271.0
+text = "Esto significa que la partícula solo puede existir dentro de la caja (0<𝑥<𝐿) y no puede escapar debido 
+a las barreras de potencial infinito."
+
+[node name="fase_2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 345.0
+offset_right = 876.0
+offset_bottom = 377.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "📝 Ecuación de Schrödinger
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 36.0
+offset_right = 842.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 15
+text = "Dado que la partícula está confinada en la región 0<𝑥<𝐿 , su estado cuántico se describe por la ecuación de 
+Schrödinger dependiente del tiempo:"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 91.0
+offset_right = 515.0
+offset_bottom = 162.0
+texture = ExtResource("16_sjn14")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 166.0
+offset_right = 794.0
+offset_bottom = 267.0
+text = "Donde:
+    🔹 ℏ es la constante reducida de Planck.
+    🔹 𝜓(𝑥) es la función de onda.
+    🔹 𝐸 es la energía de la partícula."
+
+[node name="fase_3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 657.0
+offset_right = 888.0
+offset_bottom = 689.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "♾️ Propiedades Claves
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_3"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 50.0
+offset_right = 841.0
+offset_bottom = 236.0
+theme_override_font_sizes/font_size = 15
+text = "1. No hay energía cero: La energía más baja posible es 𝐸1, lo que significa que la partícula nunca está en reposo 
+(energía del punto cero).
+2. Estados excitados: Si la partícula tiene más energía, se encuentra en un estado de mayor número cuántico 𝑛.
+3. Cuantización de niveles: A diferencia de la mecánica clásica, la energía no puede cambiar de forma continua, 
+sino en saltos discretos.
+4. Comportamiento clásico en 𝐿→∞: Para cajas muy grandes, la separación entre niveles de energía disminuye 
+y el sistema se comporta más como en la mecánica clásica."
+
+[node name="fase_4" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 905.0
+offset_right = 890.0
+offset_bottom = 937.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🎛️ Generalización a Más Dimensiones	
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_4"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 49.0
+offset_right = 842.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 15
+text = "El modelo puede extenderse a dos o tres dimensiones, donde la partícula puede moverse en varias direcciones 
+dentro de una caja tridimensional. En este caso, la energía toma la forma:"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_4"]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 94.0
+offset_right = 515.0
+offset_bottom = 172.0
+texture = ExtResource("17_jlrwm")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_4"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 176.0
+offset_right = 794.0
+offset_bottom = 215.0
+text = "Cada número cuántico 𝑛𝑥,𝑛𝑦,𝑛𝑧  representa un estado permitido en la caja tridimensional."
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_4"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 220.0
+offset_right = 719.0
+offset_bottom = 700.0
+stream = ExtResource("18_jyu4y")
+autoplay = true
+loop = true
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/particula_t/body/body/fase_4"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 725.0
+offset_right = 836.0
+offset_bottom = 861.0
+text = "El modelo de partícula en una caja es fundamental para comprender la mecánica cuántica y la cuantización
+ de la energía. Explica fenómenos como:
+🔹Niveles de energía en átomos y moléculas.
+🔹 Propiedades electrónicas de nanomateriales y semiconductores.
+🔹 Estados cuánticos en pozos de potencial usados en computación cuántica.
+"
+
+[node name="entrelazar_t" type="Control" parent="HBoxContainer/ScrollContainer/body/pages"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titulo" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 942.0
+offset_bottom = 149.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bn07b")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/titulo"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 14.0
+offset_right = 436.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 35
+text = "Entrelazamiento
+Cuántico"
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/titulo"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 39.0
+offset_right = 43.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u04my")
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 127.0
+offset_right = 943.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1y0m")
+
+[node name="introduc" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 579.0
+offset_bottom = 197.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vnofw")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body"]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 33.0
+offset_right = 914.0
+offset_bottom = 203.0
+texture = ExtResource("19_04fne")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 71.0
+offset_right = 568.0
+offset_bottom = 180.0
+text = "El entrelazamiento cuántico es un fenómeno en el que dos o más 
+partículas quedan vinculadas de tal manera que el estado de una 
+afecta instantáneamente al estado de la otra, sin importar la distancia 
+que las separe."
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.662
+anchor_top = 0.5
+anchor_right = 0.662
+anchor_bottom = 0.5
+offset_left = -600.73
+offset_top = 153.5
+offset_right = 312.27
+offset_bottom = 1886.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oicyb")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 26.0
+offset_right = 871.0
+offset_bottom = 127.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tjsmc")
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 427.0
+offset_right = 873.0
+offset_bottom = 497.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tjsmc")
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 806.0
+offset_right = 883.0
+offset_bottom = 876.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tjsmc")
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 1286.0
+offset_right = 860.0
+offset_bottom = 1690.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tjsmc")
+
+[node name="fase_1" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 54.0
+offset_right = 888.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🌀 Entrelazamiento Cuántico: La Conexión Misteriosa 
+     del Universo"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_1"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 107.0
+offset_right = 846.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 15
+text = "Cuando dos partículas (como electrones o fotones) interactúan y se entrelazan, sus propiedades cuánticas quedan 
+correlacionadas.
+Esto significa que medir una partícula automáticamente define el estado de la otra, incluso si están a años luz 
+de distancia.
+🔹 Ejemplo clásico:
+Imagina que tienes dos monedas mágicas entrelazadas. Si una persona en la Tierra lanza su moneda y obtiene 
+\"cara\", otra persona en Marte, al lanzar la suya, obtendrá \"cruz\" con una probabilidad del 100%, ¡sin importar 
+la distancia!"
+
+[node name="fase_2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 452.0
+offset_right = 888.0
+offset_bottom = 484.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "📜 Historia y Experimentos Clave"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 74.0
+offset_right = 389.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 15
+text = "🔹 Einstein, Podolsky y Rosen (1935)
+
+Plantearon el Paradoja EPR, argumentando que el 
+entrelazamiento implicaba una \"acción 
+fantasmal a distancia\".
+Einstein no creía en este fenómeno y pensaba que la 
+mecánica cuántica debía estar incompleta."
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 67.0
+offset_right = 822.0
+offset_bottom = 222.0
+text = "🔹 John Bell (1964) y las Desigualdades de Bell
+
+Demostró que si el entrelazamiento era real, violaría 
+ciertas desigualdades matemáticas de la física clásica."
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 176.0
+offset_right = 837.0
+offset_bottom = 303.0
+text = "🔹 Experimentos de Alain Aspect (1982)
+
+Confirmaron el entrelazamiento cuántico, 
+demostrando que las partículas entrelazadas afectaban 
+sus estados instantáneamente."
+
+[node name="fase_3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 830.0
+offset_right = 900.0
+offset_bottom = 862.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🌑 ¿Cómo se Usa en la Actualidad?
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_3"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 57.0
+offset_right = 828.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 15
+text = "🔹 Computación Cuántica 
+Los Qubits en computadoras cuánticas usan entrelazamiento para realizar cálculos increíblemente rápidos.
+
+🔹 Criptografía Cuántica 
+Permite comunicaciones ultra seguras con clave cuántica entrelazada.
+
+🔹 Teleportación Cuántica 
+Transferencia de información cuántica a largas distancias sin mover partículas físicamente.
+
+ 🔹Sensores Cuánticos de Alta Precisión
+Los sensores cuánticos usan el entrelazamiento para mejorar la precisión en mediciones extremas, como:
+         GPS y navegación cuántica: Sistemas más precisos que los actuales.
+         Medición de campos gravitacionales: Para detectar variaciones en la gravedad terrestre (geología y
+         exploración de recursos naturales).
+         Biomedicina: Imagenología cuántica para mejorar diagnósticos médicos."
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_3"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 471.0
+offset_right = 767.0
+offset_bottom = 843.0
+theme_override_font_sizes/font_size = 15
+text = "El entrelazamiento cuántico es uno de los 
+fenómenos más misteriosos y fascinantes 
+de la mecánica cuántica. Desafía nuestra 
+intuición sobre el espacio y el tiempo, 
+demostrando que las partículas pueden 
+permanecer conectadas sin importar la 
+distancia.
+Además de ser una confirmación del 
+comportamiento no clásico del universo, 
+este fenómeno tiene aplicaciones 
+revolucionarias en computación cuántica, 
+comunicaciones seguras y teleportación 
+cuántica. A medida que la ciencia avance, 
+el entrelazamiento podría redefinir la 
+tecnología y nuestra comprensión del cosmos."
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HBoxContainer/ScrollContainer/body/pages/entrelazar_t/body/body/fase_3"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 458.0
+offset_right = 384.0
+offset_bottom = 858.0
+stream = ExtResource("20_ywmbc")
+autoplay = true
+loop = true
+
+[node name="efecto_t" type="Control" parent="HBoxContainer/ScrollContainer/body/pages"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 942.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bn07b")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 14.0
+offset_right = 436.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 35
+text = "Efecto casimir"
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 49.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jo8ad")
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 127.0
+offset_right = 943.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1y0m")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 909.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eb8r3")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 33.0
+offset_right = 875.0
+offset_bottom = 142.0
+text = "El efecto Casimir es un fenómeno cuántico que ocurre cuando dos placas metálicas muy cercanas en el vacío 
+experimentan una fuerza de atracción, sin que haya ninguna carga o campo externo actuando sobre ellas. 
+Este efecto es una prueba de la existencia de fluctuaciones cuánticas del vacío y de la energía presente incluso 
+en el espacio vacío."
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.662
+anchor_top = 0.5
+anchor_right = 0.662
+anchor_bottom = 0.5
+offset_left = -600.73
+offset_top = 123.5
+offset_right = 312.27
+offset_bottom = 1869.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oicyb")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 24.0
+offset_right = 874.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f16yn")
+
+[node name="fase_1" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 856.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🔍 ¿Qué se representa en la simulación?"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel/fase_1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 120.0
+offset_right = 469.0
+offset_bottom = 397.0
+theme_override_font_sizes/font_size = 15
+text = "🔹 Placas metálicas: Se enfrentan en paralelo, y su separación se puede ajustar.
+
+🔹 Flecha de fuerza: Representa la fuerza de Casimir, que crece al reducir la distancia.
+
+🔹 Onda entre placas: Simboliza las fluctuaciones cuánticas del vacío, que son responsables del efecto.
+
+🔹 Vibración final: Al llegar a la distancia mínima, las placas vibran por la energía cuántica residual."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel/fase_1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 66.0
+offset_right = 844.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 15
+text = "Esta simulación muestra el efecto Casimir, un fenómeno cuántico donde dos placas metálicas muy cercanas se atraen entre sí, incluso en el vacío."
+autowrap_mode = 2
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 481.0
+offset_right = 875.0
+offset_bottom = 546.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f16yn")
+
+[node name="fase_2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel2"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 856.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🎚️ Parámetros de la simulación"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel2/fase_2"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 82.0
+offset_right = 842.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 15
+text = "A través de esta simulación puedes explorar cómo varía la fuerza de Casimir al modificar diferentes parámetros físicos. Cada uno representa un aspecto real del fenómeno:
+
+"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel2/fase_2"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 150.0
+offset_right = 837.0
+offset_bottom = 472.0
+theme_override_font_sizes/font_size = 15
+text = "1. Distancia entre placas (nm)
+Efecto: La fuerza de Casimir aumenta drásticamente al disminuir la distancia. Matemáticamente, la fuerza es inversamente proporcional a la distancia elevada a la cuarta potencia (𝐹 ∝ 1/d⁴).
+
+2. Ancho de las placas (cm)
+Efecto: A mayor área, mayor fuerza total, ya que más superficie es afectada por el vacío. La fuerza es directamente proporcional al área (𝐹 ∝ A).
+
+3. Modos de onda
+Efecto visual: La animación de la onda se vuelve más compleja con más modos. No afecta directamente la fuerza, pero ilustra la idea de cuántas formas puede vibrar el campo entre las placas."
+autowrap_mode = 2
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 1009.0
+offset_right = 876.0
+offset_bottom = 1074.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f16yn")
+
+[node name="fase_3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 856.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🧭 ¿Qué se observa en la simulación?
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel3/fase_3"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 86.0
+offset_right = 382.0
+offset_bottom = 349.0
+theme_override_font_sizes/font_size = 15
+text = "Al presionar \"Iniciar\", las placas comienzan a moverse una hacia otra por la fuerza de Casimir.
+
+La velocidad de acercamiento depende de la distancia inicial y del área.
+
+Cuando llegan a una distancia mínima segura, las placas detienen su movimiento y entran en una fase de vibración final, que representa que no pueden acercarse más."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body/body/Panel3/fase_3"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 363.0
+offset_right = 823.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 15
+text = "Aunque las placas no se tocan, el vacío cuántico no está realmente vacío. Las fluctuaciones del campo electromagnético crean diferencias de presión que empujan las placas entre sí.
+
+Este experimento es una prueba de que la nada también puede ejercer fuerzas reales y medibles.
+
+En el mundo real, este efecto solo es medible a distancias del orden de nanómetros y requiere condiciones controladas. En esta simulación, los valores están escalados y simplificados para facilitar la comprensión visual del fenómeno.
+"
+autowrap_mode = 2
+
+[node name="CasimirEs" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body"]
+position = Vector2(690, 479)
+scale = Vector2(0.215495, 0.227051)
+texture = ExtResource("21_qixdr")
+
+[node name="Placas" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t/body"]
+position = Vector2(642, 1415)
+texture = ExtResource("22_jgi5t")
+
+[node name="Button_Sim" type="Button" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 1958.0
+offset_right = 552.0
+offset_bottom = 1998.0
+theme_override_fonts/font = SubResource("FontVariation_k0kxo")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_nod6u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gubmo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tghor")
+text = "Efecto Casimir"
+
+[node name="SlD" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t"]
+position = Vector2(166.25, 1012)
+scale = Vector2(0.933862, 1)
+texture = ExtResource("24_wo8xp")
+
+[node name="SlAn" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t"]
+position = Vector2(168, 1129)
+scale = Vector2(1.11321, 1)
+texture = ExtResource("25_gu77w")
+
+[node name="SlM" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/efecto_t"]
+position = Vector2(168, 1246)
+texture = ExtResource("26_sux1r")
+
+[node name="tunel_t" type="Control" parent="HBoxContainer/ScrollContainer/body/pages"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 942.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bn07b")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 14.0
+offset_right = 436.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 35
+text = "Túnel Cuántico"
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5ylm")
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 127.0
+offset_right = 943.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1y0m")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 910.0
+offset_bottom = 134.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pu0m3")
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 32.0
+offset_right = 891.0
+offset_bottom = 133.0
+text = "En Evanensce, simulamos el efecto túnel cuántico, un fenómeno donde una partícula, como un electrón, atraviesa una barrera energética que normalmente no podría cruzar según la física clásica. Esto sucede gracias a la naturaleza ondulatoria y probabilística de las partículas en mecánica cuántica.
+
+"
+autowrap_mode = 3
+
+[node name="body" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.662
+anchor_top = 0.5
+anchor_right = 0.662
+anchor_bottom = 0.5
+offset_left = -600.73
+offset_top = 87.5
+offset_right = 312.27
+offset_bottom = 1886.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oicyb")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 885.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kkb7s")
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 353.0
+offset_right = 881.0
+offset_bottom = 401.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kkb7s")
+
+[node name="fase_1" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 427.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🔍 ¿Qué ves en la simulación?"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body/fase_1"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 57.0
+offset_right = 446.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 15
+text = "En la simulación veras dos elementos principales:
+
+🔹 La barrera de potencial:   
+Una zona elevada que representa la energía que la partícula debe superar.
+
+🔹 El espacio antes y después de la barrera:
+Donde la partícula puede moverse libremente.
+"
+autowrap_mode = 3
+
+[node name="fase_2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 367.0
+offset_right = 458.0
+offset_bottom = 402.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🧠 ¿Qué está pasando realmente?
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body/fase_2"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 59.0
+offset_right = 866.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 15
+text = "Cuando la función de onda se acerca a la barrera, parte de ella se refleja (como una onda que rebota) y parte penetra la barrera.
+
+Dentro de la barrera, la función de onda disminuye exponencialmente; esto indica que la probabilidad de encontrar la partícula allí es baja, pero no cero.
+
+Al otro lado de la barrera, la función de onda vuelve a aumentar, mostrando que hay una pequeña pero real probabilidad de que la partícula haya atravesado la barrera.
+
+Esto es el túnel cuántico: la partícula \"atraviesa\" una región que clásicamente estaría bloqueada."
+autowrap_mode = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 927.0
+offset_right = 885.0
+offset_bottom = 975.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kkb7s")
+
+[node name="fase_3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 941.0
+offset_right = 664.0
+offset_bottom = 976.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🎚️ Parámetros que puedes ajustar en Evanensce
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body/fase_3"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 65.0
+offset_right = 818.0
+offset_bottom = 288.0
+theme_override_font_sizes/font_size = 15
+text = "🔹 Ancho de la barrera: 
+Una barrera más ancha reduce la probabilidad de túnel.
+
+🔹 Energía de la partícula: 
+Energías cercanas a la altura de la barrera aumentan la probabilidad de atravesarla.
+
+🔹 Número de particulas : 
+Se podra elegir una cantidad especifica para realizar la simulacion con mas particulas y tener mayor probabilidad de observar mas particulas cruzar la barrera.
+"
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body/fase_3"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 274.0
+offset_right = 839.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 15
+text = "
+Puedes modificar estos valores para ver cómo cambian la forma de la función de onda y la probabilidad de túnel en tiempo real."
+autowrap_mode = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 1307.0
+offset_right = 886.0
+offset_bottom = 1355.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kkb7s")
+
+[node name="fase_4" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 1316.0
+offset_right = 659.0
+offset_bottom = 1351.0
+theme_override_fonts/font = ExtResource("11_eoj1n")
+theme_override_font_sizes/font_size = 29
+text = "🌑 ¿Por qué es importante este fenómeno?
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body/body/fase_4"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 59.0
+offset_right = 335.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 15
+text = "El efecto túnel es la base para muchos procesos naturales y tecnologías avanzadas:
+
+🔹 Fusión en el Sol: sin túnel, no habría energía solar.
+🔹 Electrónica cuántica: transistores, diodos y más.
+🔹 Microscopios STM: para ver átomos reales.
+
+Evanensce permite visualizar este fenómeno invisible y comprenderlo mejor."
+autowrap_mode = 3
+
+[node name="slA" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+position = Vector2(108, 1186)
+scale = Vector2(0.420732, 0.377517)
+texture = ExtResource("28_wl8f2")
+
+[node name="Tunel" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+position = Vector2(675, 350.36)
+scale = Vector2(0.350342, 0.329172)
+texture = ExtResource("21_gpi0g")
+
+[node name="SimulaTunel" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+position = Vector2(429, 942)
+scale = Vector2(0.383294, 0.293432)
+texture = ExtResource("22_miyur")
+
+[node name="SlEn" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+position = Vector2(109, 1260)
+scale = Vector2(0.331749, 0.330303)
+texture = ExtResource("23_evm5t")
+
+[node name="SlP" type="Sprite2D" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+position = Vector2(109, 1331)
+scale = Vector2(0.376637, 0.345638)
+texture = ExtResource("24_fxdtj")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t/body"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 1531.0
+offset_right = 879.0
+offset_bottom = 1867.0
+stream = ExtResource("26_fka33")
+autoplay = true
+loop = true
+
+[node name="B_SimulacionT" type="Button" parent="HBoxContainer/ScrollContainer/body/pages/tunel_t"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 2011.0
+offset_right = 295.0
+offset_bottom = 2054.0
+theme_override_fonts/font = SubResource("FontVariation_k0kxo")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_nod6u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gubmo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tghor")
+text = "Túnel Cuántico"
+
+[node name="home_b" type="Control" parent="."]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+offset_left = 70.0
+offset_right = 1151.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+
+[node name="titulo" type="Panel" parent="home_b"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496
+anchor_top = 0.077
+anchor_right = 0.496
+anchor_bottom = 0.077
+offset_left = -399.176
+offset_top = -26.896
+offset_right = 405.824
+offset_bottom = 120.104
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k5an3")
+
+[node name="Label" type="Label" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 8.0
+offset_right = 542.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 40
+text = "DESCUBRE
+"
+
+[node name="Panel" type="Panel" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 55.0
+offset_right = 575.0
+offset_bottom = 62.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x7erx")
+
+[node name="Panel2" type="Panel" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 97.0
+offset_right = 688.0
+offset_bottom = 137.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hm8vs")
+
+[node name="Panel3" type="Panel" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 188.0
+offset_right = 753.0
+offset_bottom = 566.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ecdmj")
+
+[node name="Label2" type="Label" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 59.0
+offset_right = 539.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("9_6txxm")
+theme_override_font_sizes/font_size = 20
+text = "UN MUNDO CUÁNTICO"
+
+[node name="Label3" type="Label" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 102.0
+offset_right = 701.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("10_c3j5e")
+theme_override_font_sizes/font_size = 19
+text = "En este mundo, los gatos pueden estar vivos y muertos a la vez"
+
+[node name="Label4" type="Label" parent="home_b/titulo"]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 35.0
+offset_right = 213.0
+offset_bottom = 58.0
+
+[node name="Panel2" type="Panel" parent="home_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -398.5
+offset_top = -133.0
+offset_right = 392.5
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ildx")
+
+[node name="Label" type="Label" parent="home_b/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.238
+anchor_right = 0.491
+anchor_bottom = 0.238
+offset_left = -275.381
+offset_top = -49.674
+offset_right = 291.619
+offset_bottom = 63.326
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_p1aj5")
+theme_override_font_sizes/font_size = 20
+text = "En esta sección encontraremos una biblioteca de temas cuánticos
+ así también una breve y concisa explicación de la sección
+ de simulaciones."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="home_b/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.238
+anchor_right = 0.491
+anchor_bottom = 0.238
+offset_left = -314.381
+offset_top = 74.326
+offset_right = 317.619
+offset_bottom = 187.326
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_p1aj5")
+theme_override_font_sizes/font_size = 20
+text = "Atrévete a cuestionar la realidad y verás que el universo es más extraño y
+ fascinante de lo que te imaginabas."
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="home_b/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.238
+anchor_right = 0.491
+anchor_bottom = 0.238
+offset_left = -324.381
+offset_top = 180.326
+offset_right = 307.619
+offset_bottom = 293.326
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_p1aj5")
+theme_override_font_sizes/font_size = 20
+text = "Abandona lo obvio, abraza lo imposible...
+bienvenido a la
+ fisica cuántica."
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dxs63")
+}
+
+[node name="Button_home" type="Button" parent="."]
+layout_mode = 2
+offset_left = 14.0
+offset_top = 601.0
+offset_right = 49.0
+offset_bottom = 636.0
+theme_override_icons/icon = ExtResource("9_plv34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2oh86")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ng1mm")
+icon_alignment = 1
+
+[connection signal="gui_input" from="HBoxContainer/Slidebar/VBoxContainer/top_Container/home_teoria" to="HBoxContainer/Slidebar/VBoxContainer/top_Container/home_teoria" method="_on_gui_input"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/body/pages/efecto_t/Button_Sim" to="HBoxContainer/Slidebar/VBoxContainer/top_Container/home_teoria" method="_on_button_sim_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/body/pages/tunel_t/B_SimulacionT" to="HBoxContainer/Slidebar/VBoxContainer/top_Container/Tunel" method="_on_b_simulacion_t_pressed"]
+[connection signal="pressed" from="Button_home" to="HBoxContainer/Slidebar/VBoxContainer/top_Container/home_teoria" method="_on_button_home_pressed"]

@@ -1,0 +1,196 @@
+[gd_scene load_steps=10 format=3 uid="uid://cor8ratkwqyeo"]
+
+[ext_resource type="Script" path="res://Scripts/settings.gd" id="1_lvt6b"]
+[ext_resource type="Theme" uid="uid://qia3srrfv0b7" path="res://windows_10_dark/theme.tres" id="2_qtpek"]
+[ext_resource type="Texture2D" uid="uid://dvcmoalqxhlp6" path="res://images/configuracion/panoramicConf.jpg" id="2_qu2gy"]
+[ext_resource type="Texture2D" uid="uid://dataprqvi440s" path="res://images/configuracion/iconsHome.png" id="4_g1ck1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yve1"]
+bg_color = Color(0.141176, 0.0862745, 0.231373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st1et"]
+bg_color = Color(0.486275, 0.266667, 0.521569, 0.294118)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga6m6"]
+bg_color = Color(0.243137, 0.243137, 0.243137, 0.862745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q22jp"]
+bg_color = Color(0.338665, 0.341106, 0.296492, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5k7oc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lvt6b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qu2gy")
+expand_mode = 1
+
+[node name="P_titulo" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 71.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7yve1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -458.0
+offset_top = 11.0
+offset_right = -58.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "Configuración"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 72.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_st1et")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -160.0
+offset_right = 430.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qtpek")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ga6m6")
+current_tab = 0
+
+[node name="Ajustes" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="OptionButton_cal" type="OptionButton" parent="TabContainer/Ajustes"]
+layout_mode = 1
+offset_left = 412.0
+offset_top = 95.0
+offset_right = 645.0
+offset_bottom = 130.0
+
+[node name="Label" type="Label" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 44.0
+offset_right = 288.0
+offset_bottom = 75.0
+text = "Resolución de pantalla"
+
+[node name="Label2" type="Label" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 95.0
+offset_right = 235.0
+offset_bottom = 126.0
+text = "Calidad Gráfica"
+
+[node name="OptionButton_res" type="OptionButton" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 38.0
+offset_right = 645.0
+offset_bottom = 73.0
+
+[node name="check_reflejos" type="CheckBox" parent="TabContainer/Ajustes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -47.0
+offset_right = -76.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "reflejos"
+
+[node name="check_sombras" type="CheckBox" parent="TabContainer/Ajustes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -38.0
+offset_right = 214.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "   Sombras Dinámicas"
+
+[node name="reestablecer" type="Button" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 290.0
+offset_right = 474.0
+offset_bottom = 330.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_q22jp")
+text = "Reestablecer"
+
+[node name="L_FPS" type="Label" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 208.0
+offset_right = 237.0
+offset_bottom = 239.0
+text = "limitar fps"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 223.0
+offset_right = 590.0
+offset_bottom = 239.0
+
+[node name="Fps" type="Label" parent="TabContainer/Ajustes"]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 214.0
+offset_right = 675.0
+offset_bottom = 245.0
+
+[node name="B_Home_config" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.037
+anchor_top = 0.05
+anchor_right = 0.037
+anchor_bottom = 0.05
+offset_left = -17.624
+offset_top = -17.4
+offset_right = 17.376
+offset_bottom = 17.6
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/icon = ExtResource("4_g1ck1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5k7oc")
+icon_alignment = 1
+
+[connection signal="pressed" from="B_Home_config" to="." method="_on_b_home_config_pressed"]

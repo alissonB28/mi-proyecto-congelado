@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3 uid="uid://dvk83domic2cb"]
+
+[ext_resource type="Script" path="res://Scripts/onda.gd" id="1_qcg8t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42d2m"]
+metallic = 1.0
+metallic_specular = 0.56
+emission = Color(0.315648, 0.301792, 0.317956, 1)
+heightmap_scale = 4.375
+
+[sub_resource type="BoxMesh" id="BoxMesh_2b6ej"]
+material = SubResource("StandardMaterial3D_42d2m")
+size = Vector3(1.5, 0.1, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lamqr"]
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_ckpab"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5heu"]
+albedo_color = Color(0.359866, 0.125379, 0.165206, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kt37u"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewihj"]
+albedo_color = Color(0.359866, 0.125379, 0.165206, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uai0f"]
+top_radius = 0.08
+bottom_radius = 0.0
+height = 0.1
+
+[sub_resource type="Environment" id="Environment_kfew3"]
+background_mode = 1
+background_color = Color(0.127538, 0.202493, 0.270075, 1)
+ambient_light_color = Color(0.482884, 0.362655, 0.306555, 1)
+ambient_light_energy = 0.15
+tonemap_exposure = 2.52
+sdfgi_enabled = true
+sdfgi_bounce_feedback = 1.0
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 3.5
+glow_strength = 0.99
+glow_bloom = 0.01
+glow_blend_mode = 0
+fog_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0346
+volumetric_fog_albedo = Color(0.00430658, 0.0379376, 0.040335, 1)
+volumetric_fog_length = 415.08
+
+[node name="casimir" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+shadow_enabled = true
+
+[node name="placa_inferior" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999838, 0.00791147, 0.0161543, -0.00849819, 0.999295, 0.0365786, -0.0158535, -0.03671, 0.9992, -0.0173136, -0.297349, -1.27715)
+mesh = SubResource("BoxMesh_2b6ej")
+
+[node name="placa_superior" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999838, 0.00791147, 0.0161543, -0.00849819, 0.999295, 0.0365786, -0.0158535, -0.03671, 0.9992, 0, 0, -1.277)
+mesh = SubResource("BoxMesh_2b6ej")
+
+[node name="onda" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00130576, 0, -0.412139)
+material_override = SubResource("StandardMaterial3D_lamqr")
+mesh = SubResource("ImmediateMesh_ckpab")
+script = ExtResource("1_qcg8t")
+
+[node name="flecha" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173055, 0, 0.226432)
+
+[node name="cuerpo" type="MeshInstance3D" parent="flecha"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.32698, 0.221487, -0.985524)
+material_override = SubResource("StandardMaterial3D_n5heu")
+mesh = SubResource("CylinderMesh_kt37u")
+skeleton = NodePath("../..")
+
+[node name="flecha" type="MeshInstance3D" parent="flecha"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.32607, 0.172998, -0.987332)
+material_override = SubResource("StandardMaterial3D_ewihj")
+mesh = SubResource("CylinderMesh_uai0f")
+skeleton = NodePath("../..")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kfew3")

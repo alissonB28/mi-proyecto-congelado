@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp5g46jm47afp"]
+
+[ext_resource type="Script" path="res://Scripts/rendija.gd" id="1_glryp"]
+[ext_resource type="Texture2D" uid="uid://pdy0tn30jt47" path="res://images/Teoria/icon_rendija.svg" id="1_un2ba"]
+
+[node name="Rendija" type="Control" groups=["rendija"]]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_glryp")
+active = true
+
+[node name="bg" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 50.0
+mouse_filter = 2
+color = Color(0.0313726, 0.0313726, 0.0313726, 0.188235)
+
+[node name="label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_right = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "Doble Rendija"
+vertical_alignment = 1
+
+[node name="active" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.366561, 0.151366, 0.567698, 0.952941)
+
+[node name="icon" type="Sprite2D" parent="."]
+position = Vector2(33, 26)
+scale = Vector2(0.785714, 0.75)
+texture = ExtResource("1_un2ba")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

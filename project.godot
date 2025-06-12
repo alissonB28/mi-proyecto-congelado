@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Evanesce"
+config/version="1.0"
+run/main_scene="res://Scenes/inicio.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://log.png"
+config/icon="res://images/menu_principal/onda-rem.png"
+
+[autoload]
+
+Database="*res://Scenes/database.tscn"
+Global="*res://Scripts/Global.gd"
+ConfigManager="*res://Scripts/ConfigManager.gd"
+PDF="*res://addons/godotpdf/PDF.gd"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg", "res://addons/godotpdf/plugin.cfg", "res://addons/graph_2d/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

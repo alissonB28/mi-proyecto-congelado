@@ -1,0 +1,11 @@
+[settings]
+
+max_fps=0
+
+[graphics]
+
+resolution_x=1280
+resolution_y=720
+calidad=1
+reflejos_enabled=true
+sombras_enabled=true
